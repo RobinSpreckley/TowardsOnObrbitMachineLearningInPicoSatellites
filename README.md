@@ -3,10 +3,10 @@
 This project explores deploying lightweight object detection ML models onboard Picosatellites to minimize data transmission and power consumption by processing data on-orbit.
  
  
-<p align="center">
-  <img src="assets/Introdiagram.JPG" alt="On the left the current problems with satellite data col-
-lection. On the right the benefits of On-Orbit processing." width="400"/>
-</p>
+<figure style="text-align: center;">
+  <img src="assets/Introdiagram.JPG" alt="On-Orbit ML diagram" width="400"/>
+  <figcaption><b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.</figcaption>
+</figure>
 ## 📌 Key Features
 
 - ✅ Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
