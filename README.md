@@ -6,10 +6,10 @@ This project explores deploying lightweight object detection ML models onboard P
 
 ## 📌 Key Features
 
-- ✅ Evaluates **YOLOv5/YOLOv8** models on constrained edge devices.
-- ✅ Benchmarks **power, memory, CPU usage, Accelerator usage** across platforms.
+- ✅ Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
+- ✅ Benchmarks **peak power, peak memory, CPU usage, Accelerator usage** across platforms.
 - ✅ Supports **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
-- ✅ Tests conducted on Raspberry Pi 3B+, Odroid XU4, Odroid N2+.
+- ✅ Tests conducted on Raspberry Pi 3B+, Odroid XU4, Odroid N2+ with full brakedown of OS,Architectures and Software Packages.
 
 ---
 
@@ -29,13 +29,13 @@ This project explores deploying lightweight object detection ML models onboard P
 
 The following embedded devices were used to evaluate on-orbit ML performance:
 
-✅ **Raspberry Pi 3B+** — with Coral Edge TPU  
-✅ **Odroid N2+** — with ARM Mali-G52 GPU acceleration  
-✅ **Odroid XU4** — CPU-only testing
+**Raspberry Pi 3B+** — with Coral Edge TPU  
+**Odroid N2+** — with ARM Mali-G52 GPU acceleration  
+**Odroid XU4** — CPU-only testing
 
 ### Metrics Measured
 
-- 🔋 Power (mW)
+- 🔋 Peak Power (mW)
 - 💾 Memory usage (MB)
-- ⏱️ Inference time (s)
+- ⏱️ Inference and Full Process time (s)
 - 🎯 Accuracy (mAP50, Recall)
