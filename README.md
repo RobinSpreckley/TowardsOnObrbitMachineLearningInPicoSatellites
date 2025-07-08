@@ -1,7 +1,7 @@
 # 🚀 Towards On-Orbit Machine Learning in Picosatellites
 
 This project explores deploying lightweight object detection ML models onboard Picosatellites to minimize data transmission and power consumption by processing data on-orbit.
-![Onboard ML Diagram](assets/Introdiagram.jpg)
+![Onboard ML Diagram](assets/Introdiagram.jpeg)
 ---
 
 ## 📌 Key Features
