@@ -3,7 +3,13 @@
 🛠️ How to Reproduce This Project
 This section outlines how to train object detection models, convert them to edge-compatible formats, and evaluate them on embedded devices for on-orbit ML deployment.
 
-📦 1. Setup the Environment
+Initial model training 
+
+Torch framework to train the models YOLOv5
+and YOLOV8 repositories. Once the model is trained it is converted
+to the edge framework. Thesemodels were trained for 100
+epochs in batches of four, on a Titan XP GPU. Models are made
+for the two datasets, ALL and SHIP.
 Make sure you have:
 
 Python 3.8 or 3.9
@@ -109,5 +115,7 @@ Raspberry Pi 3B+ (with Coral TPU)
 Odroid N2+ (CPU + ARM Mali GPU)
 
 Odroid XU4 (CPU only)
+
+This is the hardware I used
 
 Detailed setup instructions per device are in docs/hardware.md.
