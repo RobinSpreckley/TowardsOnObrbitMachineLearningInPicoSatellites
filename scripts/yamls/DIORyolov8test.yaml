@@ -1,0 +1,27 @@
+path: ../drive/MyDrive/Colab Notebooks/dataset/DIOR  # dataset root dir
+train: train/images  # train images (relative to 'path') 128 images
+val: test/images  # val images (relative to 'path') 128 images
+test: valid/images # test images (optional)
+# Classes
+names:
+  0: golffield
+  1: Expressway-toll-station
+  2: vehicle
+  3: trainstation
+  4: chimney
+  5: storagetank
+  6: ship
+  7: harbor
+  8: airplane
+  9: groundtrackfield
+  10: tenniscourt
+  11: dam
+  12: basketballcourt
+  13: Expressway-Service-area
+  14: stadium
+  15: airport
+  16: baseballfield
+  17: bridge
+  18: windmill
+  19: overpass
+
