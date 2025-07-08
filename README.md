@@ -4,7 +4,8 @@ This project explores deploying lightweight object detection ML models onboard P
  
  
 <p align="center">
-  <img src="assets/Introdiagram.JPG" width="400"/>
+  <img src="assets/Introdiagram.JPG" alt="On the left the current problems with satellite data col-
+lection. On the right the benefits of On-Orbit processing." width="400"/>
 </p>
 ## 📌 Key Features
 
