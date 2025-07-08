@@ -8,11 +8,12 @@ This project explores deploying lightweight object detection ML models onboard P
   <br>
   <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
 </p>
-## 📌 Key Features
+📌 Key Features
 
 - ✅ Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
-- ✅ Benchmarks **peak power, peak memory, CPU usage, Accelerator usage** across platforms.
-- ✅ Supports **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
+- ✅ Testing Approach **peak power, peak memory, CPU usage, Accelerator usage** across platforms.
+- ✅ Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
+- ✅ Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
 - ✅ Tests conducted on Raspberry Pi 3B+, Odroid XU4, Odroid N2+ with full brakedown of OS,Architectures and Software Packages.
 
 ---
