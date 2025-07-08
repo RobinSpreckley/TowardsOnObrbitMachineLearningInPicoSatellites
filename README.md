@@ -24,3 +24,18 @@ This project explores deploying lightweight object detection ML models onboard P
 ├── docs/               # Full technical documentation
 ├── README.md
 └── LICENSE
+
+## 🧪 Benchmark Platforms
+
+The following embedded devices were used to evaluate on-orbit ML performance:
+
+✅ **Raspberry Pi 3B+** — with Coral Edge TPU  
+✅ **Odroid N2+** — with ARM Mali-G52 GPU acceleration  
+✅ **Odroid XU4** — CPU-only testing
+
+### Metrics Measured
+
+- 🔋 Power (mW)
+- 💾 Memory usage (MB)
+- ⏱️ Inference time (s)
+- 🎯 Accuracy (mAP50, Recall)
