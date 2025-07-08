@@ -3,14 +3,19 @@
 🛠️ How to Reproduce This Project
 This section outlines how to train object detection models, convert them to edge-compatible formats, and evaluate them on embedded devices for on-orbit ML deployment.
 
-Initial model training 
+Initial model training
 
-Torch framework to train the models YOLOv5
-and YOLOV8 repositories. Once the model is trained it is converted
-to the edge framework. Thesemodels were trained for 100
+I used the Torch framework to train the models YOLOv5
+and YOLOV8 repositories. These models were trained for 100
 epochs in batches of four, on a Titan XP GPU. Models are made
-for the two datasets, ALL and SHIP.
-Make sure you have:
+for the two datasets, ALL and SHIP. 
+
+Edge and TPU Conversion
+
+Once the model is trained it is converted
+to the edge framework I used tflite.
+
+
 
 Python 3.8 or 3.9
 
