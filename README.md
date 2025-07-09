@@ -13,8 +13,8 @@ This project explores deploying lightweight object detection ML models onboard P
 - ✅ Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
 - ✅ Testing Approach **peak power, peak memory, CPU usage, Accelerator usage** across platforms.
 - ✅ Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
-- ✅ Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
-- ✅ Tests conducted on Raspberry Pi 3B+, Odroid XU4, Odroid N2+ with full brakedown of OS,Architectures and Software Packages.
+- ✅ Software for automating the testing process on edge devices
+- ✅ Framework for recording important information, complete breakdown of OS, Architectures and Software Packages.
 
 ---
 
