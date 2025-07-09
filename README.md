@@ -32,6 +32,12 @@ This project explores deploying lightweight object detection ML models onboard P
 
 ## 🧪 Benchmark Platforms
 
+<p align="center">
+  <img src="assets/SmartpowerandBoard.jpeg" alt="On-Orbit ML diagram" width="400"/>
+  <br>
+  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+</p>
+
 The following embedded devices were used to evaluate on-orbit ML performance:
 
 **Raspberry Pi 3B+** — with Coral Edge TPU  
