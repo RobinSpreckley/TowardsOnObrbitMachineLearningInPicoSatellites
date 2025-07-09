@@ -29,7 +29,7 @@ This project explores deploying lightweight object detection ML models onboard P
 ├── docs/               # Full technical documentation
 ├── README.md
 └── LICENSE
-
+``` 
 ## 🧪 Benchmark Platforms
 
 <p align="center">
