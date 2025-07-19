@@ -1,4 +1,4 @@
-# 🚀 Towards On-Orbit Machine Learning in Picosatellites
+# 🚀 Towards On-Orbit Machine Learning in Picosatellites-WIP
 
 This project explores deploying lightweight object detection ML models onboard Picosatellites to minimize data transmission to reduce power consumption, latency and increase security by processing data on-orbit.
  
@@ -11,7 +11,6 @@ This project explores deploying lightweight object detection ML models onboard P
 📌 Key Features
 
 - ✅ Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
-- ✅ Testing Approach **peak power, peak memory, CPU usage, Accelerator usage** across platforms.
 - ✅ Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
 - ✅ Software for automating the testing process on edge devices
 - ✅ Framework for recording important information, complete breakdown of OS, Architectures and Software Packages.
