@@ -37,7 +37,7 @@ This project explores deploying lightweight object detection ML models onboard P
   <b>Figure:</b> How to setup a board
 </p>
 
-### 🧪 Boards used in this project
+### 🧪 Setup used in this project
 
 <p align="center">
   <img src="assets/SmartpowerandBoard.jpeg" alt="On-Orbit ML diagram" width="400"/>
