@@ -32,7 +32,7 @@ This project explores deploying lightweight object detection ML models onboard P
 
 ## 📁 Setting up edge boards
 <p align="center">
-  <img src="assets/dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
+  <img src="assets/Dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
   <br>
   <b>Figure:</b> How to setup a board
 </p>
