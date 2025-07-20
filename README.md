@@ -36,14 +36,14 @@ This project explores deploying lightweight object detection ML models onboard P
   <br>
   <b>Figure:</b> How to setup a board
 </p>
-
+Each edge board introduces its own constraints. These diagrams highlight how hardware, accelerators, software packages, and progmraming languages environments interconnect. Use this as a guide to avoid common pitfalls when debugging or porting across devices.
 
 <p align="center">
   <img src="assets/testingboardsetup.JPG" alt="On-Orbit ML diagram" width="400"/>
   <br>
   <b>Figure:</b> How to setup a board
 </p>
-Each edge board introduces its own constraints. These diagrams highlight how hardware, accelerators, software packages, and progmraming languages environments interconnect. Use this as a guide to avoid common pitfalls when debugging or porting across devices.
+
 ### 🧪 Setup used in this project
 
 <p align="center">
