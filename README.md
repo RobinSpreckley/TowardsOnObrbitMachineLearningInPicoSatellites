@@ -60,6 +60,14 @@ The following embedded devices were used to evaluate on-orbit ML performance:
 **Odroid N2+** — with ARM Mali-G52 GPU acceleration  
 **Odroid XU4** — CPU-only testing
 
+## 📁 Setting up test bench
+You will need the odroid smart power 3 for real time data logging, however other 
+
+Depending on what operating system your edge board is running the filepaths can be read in diffrently, because of this it should be best to set all the absolute file paths in x file, 
+
+To record power effectively you will need a second device, to run the reciver code which will start the recording 
+simply run the files after this 
+
 ### Metrics Measured
 
 - 🔋 Peak Power at inferance and full process (mW)
