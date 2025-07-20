@@ -28,8 +28,16 @@ This project explores deploying lightweight object detection ML models onboard P
 ├── docs/               # Full technical documentation
 ├── README.md
 └── LICENSE
-``` 
-## 🧪 Benchmark Platforms
+```
+
+## 📁 Setting up edge boards
+<p align="center">
+  <img src="assets/Boardsetup.pdf" alt="On-Orbit ML diagram" width="400"/>
+  <br>
+  <b>Figure:</b> How to setup a board
+</p>
+
+### 🧪 Boards used in this project
 
 <p align="center">
   <img src="assets/SmartpowerandBoard.jpeg" alt="On-Orbit ML diagram" width="400"/>
