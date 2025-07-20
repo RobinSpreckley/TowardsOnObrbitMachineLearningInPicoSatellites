@@ -44,6 +44,7 @@ Each edge board introduces its own constraints. These diagrams highlight how har
   <br>
   <b>Figure:</b> How to setup a board
 </p>
+This shows a strategy of setting up the boards detailing the common steps needed and where you might also find the solutions for them.
 
 ### 🧪 Setup used in this project
 
