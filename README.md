@@ -62,7 +62,15 @@ The following embedded devices were used to evaluate on-orbit ML performance:
 
 ### Metrics Measured
 
-- 🔋 Peak Power (mW)
+- 🔋 Peak Power at inferance and full process (mW)
 - 💾 Memory usage (MB)
 - ⏱️ Inference and Full Process time (s)
 - 🎯 Accuracy (mAP50, Recall)
+
+
+<p align="center">
+  <img src="assets/recordingprocess.JPG" alt="On-Orbit ML diagram" width="400"/>
+  <br>
+  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+</p>
+
