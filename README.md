@@ -43,7 +43,7 @@ This project explores deploying lightweight object detection ML models onboard P
   <br>
   <b>Figure:</b> How to setup a board
 </p>
-Each edge board will come up with its own limiitations and constraints, this diagram helps to show how diffrent architectures, packages and languages rely on each other, showing sensible flow of work to bugtest and complete your work
+Each edge board introduces its own constraints. These diagrams highlight how hardware, accelerators, software packages, and progmraming languages environments interconnect. Use this as a guide to avoid common pitfalls when debugging or porting across devices.
 ### 🧪 Setup used in this project
 
 <p align="center">
