@@ -8,6 +8,7 @@ The current method of downlinking the data collected by satellites to Earth caus
   <br>
   <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
 </p>
+
 Key Features
 
 -  Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
@@ -17,19 +18,6 @@ Key Features
 -  Testbench
 --
 ---
-
-## 📁 Project Structure
-
-```bash
-.
-├── models/             # YOLOv5 & YOLOv8 trained models
-├── data/               # DIOR dataset preprocessing and conversion
-├── scripts/            # Training, quantisation, benchmarking
-├── results/            # Logged metrics and plots
-├── docs/               # Full technical documentation
-├── README.md
-└── LICENSE
-```
 
 ## 📁 Setting up edge boards
 <p align="center">
@@ -75,6 +63,18 @@ simply run the files after this
 - ⏱️ Inference and Full Process time (s)
 - 🎯 Accuracy (mAP50, Recall)
 
+## 📁 Project Structure
+
+```bash
+.
+├── models/             # YOLOv5 & YOLOv8 trained models
+├── data/               # DIOR dataset preprocessing and conversion
+├── scripts/            # Training, quantisation, benchmarking
+├── results/            # Logged metrics and plots
+├── docs/               # Full technical documentation
+├── README.md
+└── LICENSE
+```
 
 <p align="center">
   <img src="assets/recordingprocess.JPG" alt="On-Orbit ML diagram" width="400"/>
