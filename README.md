@@ -57,6 +57,20 @@ To record power effectively you will need a second device, to run the reciver co
 simply run the files after this 
 
 ### Metrics Measured
+In order to demonstrate the application of on-orbit ML, a simulation process is created. The process involves reading 100 images, adding bounding boxes to them, and saving the modified images. Figure~\ref{ProcessFlowchart} provides an overview of this process, outlining the steps and sub-tasks involved. The entire process can be divided into the following four stages. %Note that the pre-processing to post-processing steps (steps 2 to 4) are repeated 100 times, once for each image:
+
+
+<p align="center">
+  <img src="assets/recordingprocess.JPG" alt="ProcessFlowchart" width="400"/>
+  <br>
+  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+</p>
+
+
+
+
+The green-colored boxes in Figure~\ref{ProcessFlowchart} represent steps that are required when using the TensorFlow Lite (TF Lite) framework, as well as when using the ArmNN inference engine or Coral TPU extensions. The blue-colored boxes, on the other hand, can be customized, e.g., images can be loaded using the OpenCV library.
+To find points of failures such as peak memory, and to test elements of the development that can not be feasibly changed, for example diffrent code be used to load and run and edit the images however the inference of the models will stay the same across all implementations, so this collection method looks at the full process and the unchanging parts to give the results broader relevence to the industry.
 
 - 🔋 Peak Power at inferance and full process (mW)
 - 💾 Memory usage (MB)
@@ -75,10 +89,3 @@ simply run the files after this
 ├── README.md
 └── LICENSE
 ```
-
-<p align="center">
-  <img src="assets/recordingprocess.JPG" alt="On-Orbit ML diagram" width="400"/>
-  <br>
-  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
-</p>
-
