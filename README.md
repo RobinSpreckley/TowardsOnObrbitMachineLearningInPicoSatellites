@@ -23,7 +23,7 @@ Key Features
 <p align="center">
   <img src="assets/Dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
   <br>
-  <b>Figure:</b> How to setup a board
+  <b>Figure:</b> Dependencies for setting up an edge board with hardware acceleration
 </p>
 Each edge board introduces its own constraints. These diagrams highlight how hardware, accelerators, software packages, and progmraming languages environments interconnect. Use this as a guide to avoid common pitfalls when debugging or porting across devices.
 
@@ -63,7 +63,7 @@ In order to demonstrate the application of on-orbit ML, a simulation process is 
 <p align="center">
   <img src="assets/recordingprocess.JPG" alt="ProcessFlowchart" width="400"/>
   <br>
-  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+  <b>Figure:</b> A diagram of the full process, defining each subsection.
 </p>
 
 
