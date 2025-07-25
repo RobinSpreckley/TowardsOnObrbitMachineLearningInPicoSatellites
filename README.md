@@ -30,7 +30,7 @@ Each edge board introduces its own constraints. These diagrams highlight how har
 <p align="center">
   <img src="assets/testingboardsetup.JPG" alt="On-Orbit ML diagram" width="400"/>
   <br>
-  <b>Figure:</b> How to setup a board
+  <b>Figure:</b> Overview of the process for setting up an edge board, OS, tools and packages, the ML framework, recordings software, and hardware acceleration.
 </p>
 This shows a strategy of setting up the boards detailing the common steps needed and where you might also find the solutions for them.
 
@@ -39,7 +39,7 @@ This shows a strategy of setting up the boards detailing the common steps needed
 <p align="center">
   <img src="assets/SmartpowerandBoard.jpeg" alt="On-Orbit ML diagram" width="400"/>
   <br>
-  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+  <b>Figure:</b>1) Is the Smart Power 3 used in the power recording 2) USB-Uart cable for transferring power data to the main computer 3) Split cable power cable split leads in to red and black so it can draw power from Smart Power 3 4)Odroid Xu4 board 5) Raspberry Pi3b+ board 6) Odroid N2+ Board.
 </p>
 
 The following embedded devices were used to evaluate on-orbit ML performance:
