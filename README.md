@@ -57,7 +57,7 @@ To record power effectively you will need a second device, to run the reciver co
 simply run the files after this 
 
 ### Metrics Measured
-In order to demonstrate the application of on-orbit ML, a simulation process is created. The process involves reading 100 images, adding bounding boxes to them, and saving the modified images. Figure~\ref{ProcessFlowchart} provides an overview of this process, outlining the steps and sub-tasks involved. The entire process can be divided into the following four stages. %Note that the pre-processing to post-processing steps (steps 2 to 4) are repeated 100 times, once for each image:
+In order to demonstrate the application of on-orbit ML, a simulation process is created. The process involves reading 100 images, adding bounding boxes to them, and saving the modified images. The diagram below provides an overview of this process, outlining the steps and sub-tasks involved. The entire process can be divided into the following four stages. %Note that the pre-processing to post-processing steps (steps 2 to 4) are repeated 100 times, once for each image:
 
 
 <p align="center">
