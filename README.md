@@ -69,7 +69,7 @@ In order to demonstrate the application of on-orbit ML, a simulation process is 
 
 
 
-The green-colored boxes in Figure~\ref{ProcessFlowchart} represent steps that are required when using the TensorFlow Lite (TF Lite) framework, as well as when using the ArmNN inference engine or Coral TPU extensions. The blue-colored boxes, on the other hand, can be customized, e.g., images can be loaded using the OpenCV library.
+The green-colored boxes in represent steps that are required when using the TensorFlow Lite (TF Lite) framework, as well as when using the ArmNN inference engine or Coral TPU extensions. The blue-colored boxes, on the other hand, can be customized, e.g., images can be loaded using the OpenCV library.
 To find points of failures such as peak memory, and to test elements of the development that can not be feasibly changed, for example diffrent code be used to load and run and edit the images however the inference of the models will stay the same across all implementations, so this collection method looks at the full process and the unchanging parts to give the results broader relevence to the industry.
 
 
