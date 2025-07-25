@@ -9,16 +9,39 @@ The current method of downlinking the data collected by satellites to Earth caus
   <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
 </p>
 
-Key Features
 
--  Evaluates Object Detection models on constrained edge devices in the context of a a full deployment for example data reading, model image slicing .
--  Hardware and Software Optimisation **quantisation (INT8, FP16)** and hardware acceleration (TPU, GPU, etc.).
--  Software for automating the testing process on edge devices, including cv2 image processing and NMS for variety of models and quantisations. 
--  Framework for recording important information, complete breakdown of OS, Architectures and Software Packages.
--  Testbench
---
+## What This Project Demonstrates
+
+- Deployment of **lightweight ML models** on edge devices for real-time satellite image processing.
+- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (TensorRT, TF Lite).
+- Benchmarking of object detection pipelines with **quantization and compression**.
+- A **data logging framework** to record power, latency, and memory usage during inference.
+- Insights into trade-offs between **accuracy, energy efficiency, and runtime** for different mission constraints.
+
 ---
 
+## Key Results
+
+- **Power consumption reduced by up to XX%** using INT8 quantization vs. FP32 precision.
+- **YOLOv5n + Coral TPU** achieved the **fastest inference** (XX ms) with mAP > XX%.  
+- Identified **optimal combinations of hardware and models** for Picosatellite constraints.  
+- Developed a testbench enabling **real-time recording of power and memory usage** during edge inference.
+- Showed that **on-orbit ML can cut downlink data needs by XX%**, improving autonomy.
+
+---
+
+## Skills & Techniques
+
+- **Edge AI Optimization:** Quantization (INT8, FP16), pruning, lightweight CNN architectures.
+- **Object Detection:** YOLOv5, YOLOv8 (PyTorch, ONNX, TensorRT).
+- **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Coral Edge TPU.
+- **Profiling & Benchmarking:** Power (W), Memory (MB), Inference Time (ms).
+- **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
+- **Tech Stack:** Python, C++, TensorFlow Lite, PyTorch, ONNX Runtime.
+
+---
+
+phon
 ## 📁 Setting up edge boards
 <p align="center">
   <img src="assets/Dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
