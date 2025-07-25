@@ -18,7 +18,6 @@ The current method of downlinking the data collected by satellites to Earth caus
 - A **data logging framework** to record power, latency, and memory usage during inference.
 - Insights into trade-offs between **accuracy, energy efficiency, and runtime** for different mission constraints.
 
----
 
 ## Key Results
 
@@ -28,7 +27,6 @@ The current method of downlinking the data collected by satellites to Earth caus
 - Developed a testbench enabling **real-time recording of power and memory usage** during edge inference.
 - Showed that **on-orbit ML can cut downlink data needs by XX%**, improving autonomy.
 
----
 
 ## Skills & Techniques
 
@@ -39,7 +37,6 @@ The current method of downlinking the data collected by satellites to Earth caus
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 - **Tech Stack:** Python, C++, TensorFlow Lite, PyTorch, ONNX Runtime.
 
----
 
 phon
 ## 📁 Setting up edge boards
