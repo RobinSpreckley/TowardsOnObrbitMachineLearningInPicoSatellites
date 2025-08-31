@@ -33,6 +33,8 @@ This project investigated and compared the performance of various YOLOv5 and YOL
 - ⏱️ Inference and Full Process time (ms)
 - 🎯 Accuracy (mAP50)
 
+The report visulises, boxplots of these measurements allowing engineers to find the best solution for them, For example if power efficency if your bottleneck the YOLOv8m models on the N2+ GPU have the best combination of accuracy and power-efficientcy in full use case. Additionally if power efficency is all you want using smaller image sizes with a TPU becomes more power efficient at inference, however this has the lowest accuracy. 
+
 ## 📁 Project Structure
 
 ```bash
