@@ -20,22 +20,16 @@ The current method of downlinking the data collected by satellites to Earth caus
 
 
 ## Key Results
-
-- **Power consumption reduced by up to XX%** using INT8 quantization vs. FP32 precision.
-- **YOLOv5n + Coral TPU** achieved the **fastest inference** (XX ms) with mAP > XX%.  
-- Identified **optimal combinations of hardware and models** for Picosatellite constraints.  
+- Identified **optimal combinations of hardware and software** for diffrent Picosatellite constraints.  
 - Developed a testbench enabling **real-time recording of power and memory usage** during edge inference.
-- Showed that **on-orbit ML can cut downlink data needs by XX%**, improving autonomy.
-
 
 ## Skills & Techniques
 
 - **Edge AI Optimization:** Quantization (INT8, FP16), pruning, lightweight CNN architectures.
-- **Object Detection:** YOLOv5, YOLOv8 (PyTorch, ONNX, TensorRT).
-- **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Coral Edge TPU.
+- **Object Detection:** YOLOv5, YOLOv8 (PyTorch, TF-Lite).
+- **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
 - **Profiling & Benchmarking:** Power (W), Memory (MB), Inference Time (ms).
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
-- **Tech Stack:** Python, C++, TensorFlow Lite, PyTorch, ONNX Runtime.
 
 
 phon
