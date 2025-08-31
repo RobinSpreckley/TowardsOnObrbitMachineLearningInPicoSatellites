@@ -6,7 +6,7 @@ The current method of downlinking the data collected by satellites to Earth caus
 <p align="center">
   <img src="assets/Introdiagram.JPG" alt="On-Orbit ML diagram" width="400"/>
   <br>
-  <b>Figure:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+  <b>Current Problems with Data Recording on Pico-Satellites:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
 </p>
 
 
