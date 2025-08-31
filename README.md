@@ -13,21 +13,18 @@ The current method of downlinking the data collected by satellites to Earth caus
 ## What This Project Demonstrates
 
 - Deployment of **lightweight ML models** on edge devices for real-time satellite image processing.
-- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (Operation Delegates, Quantisation, TF Lite).
-- A **data logging framework** to record power, latency, and memory usage during inference.
+- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (Operation Delegates, Quantisation, Edge ML Frameworks).
+- A **test bench** to record power, latency, and memory usage during inference.
 - Insights into trade-offs between **accuracy, energy efficiency, and runtime** for different mission constraints.
-
 
 ## Key Results
 - Identified **optimal combinations of hardware and software** for diffrent Picosatellite constraints.  
-- Developed a testbench enabling **real-time recording of power and memory usage** during edge inference.
 
 ## Skills & Techniques
 
-- **Edge AI Optimization:** Quantization (INT8, FP16), pruning, lightweight CNN architectures.
+- **Edge AI Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
 - **Object Detection:** YOLOv5, YOLOv8 (PyTorch, TF-Lite).
 - **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
-- **Profiling & Benchmarking:** Power (W), Memory (MB), Inference Time (ms).
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 
 
@@ -58,7 +55,7 @@ This shows a strategy of setting up the boards detailing the common steps needed
 The following embedded devices were used to evaluate on-orbit ML performance:
 
 **Raspberry Pi 3B+** — with Coral Edge TPU  
-**Odroid N2+** — with ARM Mali-G52 GPU acceleration  
+**Odroid N2+** — with ARM Mali-G52 GPU and CPU acceleration  
 **Odroid XU4** — CPU-only testing
 
 ## 📁 Setting up test bench
@@ -66,10 +63,10 @@ To record power effectively you will need a second device, to run the reciver co
 
 ### Metrics Measured
 
-- 🔋 Peak and average Power at inference and full process (W)
-- 💾 Memory usage at inference and full process (MB)
+- 🔋 Peak and average Power at inference and full process (mW)
+- 💾 Real Memory usage at inference and full process (MB)
 - ⏱️ Inference and Full Process time (ms)
-- 🎯 Accuracy (mAP50, Recall)
+- 🎯 Accuracy (mAP50)
 
 ## 📁 Project Structure
 
