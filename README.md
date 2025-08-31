@@ -16,7 +16,7 @@ The current method of downlinking the data collected by satellites to Earth caus
 
 This project investigated and compared the performance of various YOLOv5 and YOLOv8 object detection models at different sizes, classes, and quantisation, across diverse board setups. These setups included Raspberry Pi 3B+ with and without TPU, Odroid XU4, and Odroid N2+ using the ARM TF-Lite delegate with and without GPU. The study evaluated the models based on power efficiency, peak power, timings, and memory usage, highlighting the strengths and weaknesses of each model and the applied techniques, providing insights for their optimal utilisation in real-world small satellite applications across a range of test setups and Model variations. Identifying the best combination of model , software and hardware accelerator depending on the requirement of the Pico-Satellite.
 
-## Tools & Techniques
+### Tools & Techniques
 
 - **Software Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
 - **Object Detection:** YOLOv5, YOLOv8 lightweight model training.
@@ -26,7 +26,7 @@ This project investigated and compared the performance of various YOLOv5 and YOL
 - **Data Manipulation Packages:** OpenCV, Pandas, NumPy
 - **Data Visulisation Packages:** Seaborn, Matplotlib.
 
-### Metrics Measured
+## Metrics Measured and Example Solution
 
 - 🔋 Peak and average Power at inference and full process (mW)
 - 💾 Real Memory usage at inference and full process (MB)
