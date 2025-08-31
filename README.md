@@ -12,15 +12,12 @@ The current method of downlinking the data collected by satellites to Earth caus
 
 ## What This Project Demonstrates
 
-- Deployment of **lightweight ML models** on edge devices for real-time satellite image processing.
-- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (Operation Delegates, Quantisation, Edge ML Frameworks).
-- A **test bench** to record power, latency, and memory usage during inference.
-- Identified **optimal combinations of hardware and software** for diffrent Picosatellite constraints.  
+This project investigated and compared the performance of various YOLOv5 and YOLOv8 object detection models at different sizes, classes, and quantisation, across diverse board setups. These setups included Raspberry Pi 3B+ with and without TPU, Odroid XU4, and Odroid N2+ using the ARM TF-Lite delegate with and without GPU. The study evaluated the models based on power efficiency, peak power, timings, and memory usage, highlighting the strengths and weaknesses of each model and the applied techniques, providing insights for their optimal utilisation in real-world small satellite applications across a range of test setups and Model variations. 
 
-## Skills & Techniques
+## Tools & Techniques
 
-- **Edge Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
-- **Object Detection:** YOLOv5, YOLOv8 model training.
+- **Software Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
+- **Object Detection:** YOLOv5, YOLOv8 lightweight model training.
 - **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 
