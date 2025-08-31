@@ -21,8 +21,10 @@ This project investigated and compared the performance of various YOLOv5 and YOL
 - **Software Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
 - **Object Detection:** YOLOv5, YOLOv8 lightweight model training.
 - **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
-- **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
-
+- **Programming Languages:** Python, CMD
+- **Machine Learning Packages:** PyTorch, Tf-Lite, TensorFlow
+- **Data Manipulation Packages:** OpenCV, Pandas, NumPy
+- **Data Visulisation Packages:** Seaborn, Matplotlib.
 
 ### Metrics Measured
 
