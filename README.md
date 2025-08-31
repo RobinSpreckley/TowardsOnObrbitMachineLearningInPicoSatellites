@@ -13,8 +13,7 @@ The current method of downlinking the data collected by satellites to Earth caus
 ## What This Project Demonstrates
 
 - Deployment of **lightweight ML models** on edge devices for real-time satellite image processing.
-- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (TensorRT, TF Lite).
-- Benchmarking of object detection pipelines with **quantization and compression**.
+- Integration of **hardware accelerators (TPU, GPU)** and software optimizations (Operation Delegates, Quantisation, TF Lite).
 - A **data logging framework** to record power, latency, and memory usage during inference.
 - Insights into trade-offs between **accuracy, energy efficiency, and runtime** for different mission constraints.
 
