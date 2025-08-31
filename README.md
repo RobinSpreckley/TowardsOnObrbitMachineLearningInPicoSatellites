@@ -63,29 +63,9 @@ The following embedded devices were used to evaluate on-orbit ML performance:
 **Odroid XU4** — CPU-only testing
 
 ## 📁 Setting up test bench
-You will need the odroid smart power 3 for real time data logging, however other 
-
-Depending on what operating system your edge board is running the filepaths can be read in diffrently, because of this it should be best to set all the absolute file paths in x file, 
-
-To record power effectively you will need a second device, to run the reciver code which will start the recording 
-simply run the files after this 
+To record power effectively you will need a second device, to run the reciver code which will start the recording, to do this you will need the odroid smart power 3 for real time data logging, to be used with the custom scripts. Depending on what operating system your edge board is running the filepaths can be read in diffrently, because of this it should be best to set all the absolute file paths in the script, simply run the files after this for testing. 
 
 ### Metrics Measured
-In order to demonstrate the application of on-orbit ML, a simulation process is created. The process involves reading 100 images, adding bounding boxes to them, and saving the modified images. The diagram below provides an overview of this process, outlining the steps and sub-tasks involved. The entire process can be divided into the following four stages. %Note that the pre-processing to post-processing steps (steps 2 to 4) are repeated 100 times, once for each image:
-
-
-<p align="center">
-  <img src="assets/recordingprocess.JPG" alt="ProcessFlowchart" width="400"/>
-  <br>
-  <b>Figure:</b> A diagram of the full process, defining each subsection.
-</p>
-
-
-
-
-The green-colored boxes in represent steps that are required when using the TensorFlow Lite (TF Lite) framework, as well as when using the ArmNN inference engine or Coral TPU extensions. The blue-colored boxes, on the other hand, can be customized, e.g., images can be loaded using the OpenCV library.
-To find points of failures such as peak memory, and to test elements of the development that can not be feasibly changed, for example diffrent code be used to load and run and edit the images however the inference of the models will stay the same across all implementations, so this collection method looks at the full process and the unchanging parts to give the results broader relevence to the industry.
-
 
 - 🔋 Peak and average Power at inference and full process (W)
 - 💾 Memory usage at inference and full process (MB)
