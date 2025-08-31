@@ -15,9 +15,6 @@ The current method of downlinking the data collected by satellites to Earth caus
 - Deployment of **lightweight ML models** on edge devices for real-time satellite image processing.
 - Integration of **hardware accelerators (TPU, GPU)** and software optimizations (Operation Delegates, Quantisation, Edge ML Frameworks).
 - A **test bench** to record power, latency, and memory usage during inference.
-- Insights into trade-offs between **accuracy, energy efficiency, and runtime** for different mission constraints.
-
-## Key Results
 - Identified **optimal combinations of hardware and software** for diffrent Picosatellite constraints.  
 
 ## Skills & Techniques
@@ -28,7 +25,6 @@ The current method of downlinking the data collected by satellites to Earth caus
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 
 
-phon
 ## 📁 Setting up edge boards
 <p align="center">
   <img src="assets/Dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
