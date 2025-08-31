@@ -19,8 +19,8 @@ The current method of downlinking the data collected by satellites to Earth caus
 
 ## Skills & Techniques
 
-- **Edge AI Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
-- **Object Detection:** YOLOv5, YOLOv8 (PyTorch, TF-Lite).
+- **Edge Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
+- **Object Detection:** YOLOv5, YOLOv8 model training.
 - **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 
