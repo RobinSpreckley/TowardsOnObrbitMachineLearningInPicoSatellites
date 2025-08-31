@@ -22,38 +22,6 @@ This project investigated and compared the performance of various YOLOv5 and YOL
 - **Computer Vision Tools:** OpenCV for preprocessing and image slicing.
 
 
-## 📁 Setting up edge boards
-<p align="center">
-  <img src="assets/Dependencies.JPG" alt="On-Orbit ML diagram" width="400"/>
-  <br>
-  <b>Figure:</b> Dependencies for setting up an edge board with hardware acceleration
-</p>
-Each edge board introduces its own constraints. These diagrams highlight how hardware, accelerators, software packages, and progmraming languages environments interconnect. Use this as a guide to avoid common pitfalls when debugging or porting across devices.
-
-<p align="center">
-  <img src="assets/testingboardsetup.JPG" alt="On-Orbit ML diagram" width="400"/>
-  <br>
-  <b>Figure:</b> Overview of the process for setting up an edge board, OS, tools and packages, the ML framework, recordings software, and hardware acceleration.
-</p>
-This shows a strategy of setting up the boards detailing the common steps needed and where you might also find the solutions for them.
-
-### 🧪 Setup used in this project
-
-<p align="center">
-  <img src="assets/SmartpowerandBoard.jpeg" alt="On-Orbit ML diagram" width="400"/>
-  <br>
-  <b>Figure:</b>1) Is the Smart Power 3 used in the power recording 2) USB-Uart cable for transferring power data to the main computer 3) Split cable power cable split leads in to red and black so it can draw power from Smart Power 3 4)Odroid Xu4 board 5) Raspberry Pi3b+ board 6) Odroid N2+ Board.
-</p>
-
-The following embedded devices were used to evaluate on-orbit ML performance:
-
-**Raspberry Pi 3B+** — with Coral Edge TPU (Google Delegates)  
-**Odroid N2+** — with ARM Mali-G52 GPU and CPU (ARM Delegates) 
-**Odroid XU4** — CPU (AMMX Delegate) 
-
-## 📁 Setting up test bench
-To record power effectively you will need a second device, to run the reciver code which will start the recording, to do this you will need the odroid smart power 3 for real time data logging, to be used with the custom scripts. Depending on what operating system your edge board is running the filepaths can be read in diffrently, because of this it should be best to set all the absolute file paths in the script, simply run the files after this for testing. 
-
 ### Metrics Measured
 
 - 🔋 Peak and average Power at inference and full process (mW)
