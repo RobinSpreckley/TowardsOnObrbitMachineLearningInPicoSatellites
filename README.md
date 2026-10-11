@@ -1,49 +1,73 @@
 # 🚀 Towards On-Orbit Machine Learning in Picosatellites
 
-## Problem Description
+**MSci dissertation, University of Glasgow · industry task for [Alba Orbital](http://www.albaorbital.com) · top mark in the year**
 
-The current method of downlinking the data collected by satellites to Earth causes high latency and power consumption and therefore is unsuitable for Picosatellites with limited system resources. On-Orbit Machine Learning (on-orbit ML) offers a solution by decreasing the amount of data to transmit. However, while ML methods exist for use in Picosatellites, they lack suitable recordings of system measurements such as power, memory, and processing time, which hinders their implementation. We address this issue by testing various ML models with compression methods and lightweight architectures on edge setups, using a mix of hardware and software optimisations, while focusing on different processing architectures, accelerators, and delegate improvements. We found that different combinations of models and edge setups for various goals and limitations that Picosatellites can have, providing valuable insights for practical applications. 
- 
- 
+📄 [Read the full paper (PDF)](<Towards_On_Orbit_Machine_Learning_in_Picosatellites(Final).pdf>)
+
+Which ML model and hardware should a picosatellite carry? Published on-orbit ML work rarely measured real power, memory or runtime, so there was no way to answer that. This project benchmarks lightweight object detectors across edge boards and accelerators to fill the gap.
+
 <p align="center">
-  <img src="assets/Introdiagram.JPG" alt="On-Orbit ML diagram" width="400"/>
+  <img src="assets/Introdiagram.JPG" alt="Downlinking everything versus filtering on board" width="420"/>
   <br>
-  <b>Current Problems with Data Recording on Pico-Satellites:</b> Left – challenges with traditional satellite data collection; Right – benefits of On-Orbit processing using edge ML.
+  <sub>Left: sending all data to Earth wastes bandwidth and power. Right: filtering on board with ML.</sub>
 </p>
 
+## Headline result
 
-## What This Project Demonstrates
+| Goal | Best setup | mAP50 | Peak power | Peak memory | 100 images |
+|---|---|---|---|---|---|
+| Power efficiency / memory | YOLOv5n-FP16, Odroid N2+ GPU | 0.897 | 2.43 W | 349 MB | 61.3 s |
+| Fastest end to end | YOLOv8n-FP16, Odroid N2+ GPU | 0.896 | 2.48 W | 389 MB | 54.7 s |
+| Lowest memory | YOLOv5n on Coral Edge TPU (448×448) | 0.478 | 2.14 W | 70 MB | 50.7 s |
 
-This project investigated and compared the performance of various YOLOv5 and YOLOv8 object detection models at different sizes, classes, and quantisation, across diverse board setups. These setups included Raspberry Pi 3B+ with and without TPU, Odroid XU4, and Odroid N2+ using the ARM TF-Lite delegate with and without GPU. The study evaluated the models based on power efficiency, peak power, timings, and memory usage, highlighting the strengths and weaknesses of each model and the applied techniques, providing insights for their optimal utilisation in real-world small satellite applications across a range of test setups and Model variations. Identifying the best combination of model , software and hardware accelerator depending on the requirement of the Pico-Satellite.
+All figures are for the ship-detection models (SHIP dataset). See the paper for the full set.
 
-### Tools & Techniques
+## What I built
 
-- **Software Optimization:** Quantization (INT8, FP16), TF-Lite, Linux.
-- **Object Detection:** YOLOv5, YOLOv8 lightweight model training.
-- **Hardware & Embedded Systems:** Raspberry Pi 3B+, Odroid N2+, Odroid Xu4, Coral Edge TPU.
-- **Programming Languages:** Python, CMD
-- **Machine Learning Packages:** PyTorch, Tf-Lite, TensorFlow
-- **Data Manipulation Packages:** OpenCV, Pandas, NumPy
-- **Data Visulisation Packages:** Seaborn, Matplotlib.
+- **Models:** trained YOLOv5n/s and YOLOv8n/s on the [DIOR](https://arxiv.org/abs/1909.00133) remote-sensing dataset (23,463 images, 20 classes) in two versions: all classes and ships only. Converted them from PyTorch to TF-Lite with FP16 and INT8 quantisation, and compiled the INT8 models for the Coral Edge TPU.
+- **Hardware:** six test configurations on three boards, working through OS, driver and runtime version conflicts.
 
-## Metrics Measured and Example Solution
+  | Board | CPU | Accelerator | Test cases |
+  |---|---|---|---|
+  | Raspberry Pi 3B+ | 4× A53, 64-bit | Coral USB TPU | TPU (PyCoral), CPU |
+  | Odroid XU4 | 4× A15 + 4× A7, 32-bit | none | CPU |
+  | Odroid N2+ | 4× A73 + 2× A53, 64-bit | Mali-G52 GPU (ArmNN) | GPU, CPU |
 
-- 🔋 Peak and average Power at inference and full process (mW)
-- 💾 Real Memory usage at inference and full process (MB)
-- ⏱️ Inference and Full Process time (ms)
-- 🎯 Accuracy (mAP50)
+- **Measurement rig:** an Odroid Smart Power 3 logs power at 10+ samples a second. The board signals start and stop over TCP to a separate machine, so logging adds no load to the device under test. Standby power is subtracted, and Wi-Fi and Bluetooth are off.
+- **Other measurements:**
+  - Memory across the whole process tree (psutil).
+  - Wall-clock and CPU time for each stage: initialisation, pre-processing, inference and post-processing.
+  - Two efficiency metrics: output tensors per second per watt (inference) and frames per second per watt (full pipeline).
 
-The report visulises, boxplots of these measurements allowing engineers to find the best solution for them, For example if power efficency if your bottleneck the YOLOv8m models on the N2+ GPU have the best combination of accuracy and power-efficientcy in full use case. Additionally if power efficency is all you want using smaller image sizes with a TPU becomes more power efficient at inference, however this has the lowest accuracy. 
+<p align="center">
+  <img src="assets/SmartpowerandBoard.jpeg" alt="Power measurement setup" width="380"/>
+  <br>
+  <sub>The power-measurement setup with the three boards.</sub>
+</p>
 
-## 📁 Project Structure
+## Findings
 
-```bash
-.
-├── models/             # YOLOv5 & YOLOv8 trained models
-├── data/               # DIOR dataset preprocessing and conversion
-├── scripts/            # Training, quantisation, benchmarking
-├── results/            # Logged metrics and plots
-├── docs/               # Full technical documentation
-├── README.md
-└── LICENSE
+- **INT8 suits the CPU and FP16 suits the GPU.** ArmNN's GPU path handles INT8 poorly.
+- **YOLOv8 is faster end to end on the GPU even though its inference is slower.** Its anchor-free head outputs 13,125 boxes against YOLOv5's 39,375, so post-processing is much cheaper.
+- **The TPU is the most efficient at inference, but only on smaller images.** The model must map entirely onto the TPU, which limits images to 448×448 (ships) or 256×256 (all classes). The Pi 3B+'s slow CPU then becomes the bottleneck in post-processing.
+- **A 32-bit CPU cut YOLOv5's FP16 memory use** (Odroid XU4), but did not help YOLOv8.
+- **FPGA was planned but not tested.** Vitis AI has dropped support for the PYNQ-Z2's Zynq-7000 chip.
+
+## Repository layout
+
 ```
+├── models/              Trained models: PyTorch (.pt), TF-Lite FP32/FP16/INT8, Edge TPU
+├── scripts/             Model conversion notebooks and dataset configs (YAML)
+├── RecordingCode/       On-board benchmark scripts for power, time and memory
+├── DataVisulisations/   Notebooks that turn the logs into heatmaps and boxplots
+├── assets/              Figures
+└── Towards_On_Orbit_Machine_Learning_in_Picosatellites(Final).pdf
+```
+
+## Tools
+
+Python · PyTorch · TF-Lite · PyCoral · ArmNN · OpenCV · NumPy · Pandas · psutil · Matplotlib · Seaborn · Linux (Ubuntu, Raspberry Pi OS)
+
+## Acknowledgements
+
+Supervised by Dr Lito Michala, with thanks to Dr Gethin Norman, Dr José Cano Reyes and Alba Orbital.
