@@ -7,7 +7,7 @@
 Which ML model and hardware should a picosatellite carry? Published on-orbit ML work rarely measured real power, memory or runtime, so there was no way to answer that. This project benchmarks lightweight object detectors across edge boards and accelerators to fill the gap.
 
 <p align="center">
-  <img src="assets/Introdiagram.JPG" alt="Downlinking everything versus filtering on board" width="420"/>
+  <img src="https://raw.githubusercontent.com/RobinSpreckley/TowardsOnObrbitMachineLearningInPicoSatellites/main/assets/Introdiagram.JPG" alt="Downlinking everything versus filtering on board" width="420"/>
   <br>
   <sub>Left: sending all data to Earth wastes bandwidth and power. Right: filtering on board with ML.</sub>
 </p>
@@ -40,7 +40,7 @@ All figures are for the ship-detection models (SHIP dataset). See the paper for 
   - Two efficiency metrics: output tensors per second per watt (inference) and frames per second per watt (full pipeline).
 
 <p align="center">
-  <img src="assets/SmartpowerandBoard.jpeg" alt="Power measurement setup" width="380"/>
+  <img src="https://raw.githubusercontent.com/RobinSpreckley/TowardsOnObrbitMachineLearningInPicoSatellites/main/assets/SmartpowerandBoard.jpeg" alt="Power measurement setup" width="380"/>
   <br>
   <sub>The power-measurement setup with the three boards.</sub>
 </p>
